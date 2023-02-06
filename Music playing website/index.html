@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+</head>
+<body>
+    <div class="box-container">
+        <div class="nowplaying-container">
+            <i style="font-size: 24px;" class="fa-regular fa-heart"></i>
+            <span>Now Playing</span>
+            <i id="bars" style="font-size: 24px;" class="fa-solid fa-bars"></i>
+        </div>
+        <div id="img" class="image-container">
+
+        </div>
+        <div class="nameprocess-container">
+            <h2 id="songname" style="margin-top: 5px;">Tere Naina</h2>
+            <h4 id="singername" style="margin-top: 5px;">Arijit Singh</h4>
+            <input onchange="rangeSetup()" style="margin-top:2%;" type="range" name="" id="range" min="0" max="100" value="0">
+            <div style="width: 95%; display: flex; justify-content: space-between;">
+                <span id="currentduration" ><span id="currentmints"></span>:<span id="currentsecs"></span></span>
+                <span id="totalduration" >5:00</span>
+
+            </div>
+        </div>
+        <div class="icons-container">
+            <div class="play-container">
+                <div>
+                    <i onclick="previousaudio()" id="back" class="fa-solid fa-backward"></i>
+                </div>
+                <div>
+                    <i onclick="playaudio()" id="play" class="fa-solid fa-play"></i>
+                </div>
+                <div>
+                    <i onclick="nextaudio()" id="forward" class="fa-sharp fa-solid fa-forward"></i>
+                </div>
+                
+            </div>
+        </div>
+        <div id="list" class="list-container">
+            <i id="close" style="position: relative; left:93%; top: 3%;font-size: 20px;" class="fa-solid fa-xmark"></i>
+            <input style="font-size: 17px;" type="search" name="" id="searchbar" placeholder="Search here">
+            <ul id="songprint">
+                <!-- <li>Kahani Suno</li>
+                <li>Chakar</li>
+                <li>Khamoshiyan</li> -->
+                
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
